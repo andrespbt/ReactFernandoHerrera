@@ -6,7 +6,11 @@ import { HelloWorldApp } from './HelloWorldApp';
 import './styles.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
-        <CounterApp value={0} />
-    </React.StrictMode>
-)
+	<React.StrictMode>
+		<CounterApp value={0} />
+		{/* <FirstApp
+			title="Andres"
+			subTitle={123}
+		/> */}
+	</React.StrictMode>
+);
