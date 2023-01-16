@@ -9,12 +9,4 @@ describe('Tests on <GiftExpertApp/>', () => {
 		expect(screen.getByText('Dragon Ball Z')).toBeTruthy();
 		expect(screen.getByText('Loading...')).toBeTruthy();
 	});
-
-	test('should not add existing category', () => {
-		render(<GiftExpertApp />);
-		const { result } = renderHook(() => useState('Dragon Ball Z'));
-		console.log(result);
-		const [categories] = result.current;
-		console.log(categories);
-	});
 });
