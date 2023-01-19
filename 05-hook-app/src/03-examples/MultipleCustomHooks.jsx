@@ -21,13 +21,12 @@ export const MultipleCustomHooks = () => {
 				/>
 			)}
 
-			{data && (
-				<button
-					className="btn btn-primary"
-					onClick={() => nextQuote(url)}>
-					Next quote
-				</button>
-			)}
+			<button
+				className="btn btn-primary"
+				disabled={isLoading}
+				onClick={() => nextQuote(url)}>
+				Next quote
+			</button>
 		</>
 	);
 };
