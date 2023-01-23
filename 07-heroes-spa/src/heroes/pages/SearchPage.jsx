@@ -30,7 +30,7 @@ export const SearchPage = () => {
       <div className="row">
         <div className="col-5">
           <h4>Searching</h4>
-          <form onSubmit={onSearchSubmit}>
+          <form onSubmit={onSearchSubmit} aria-label="form">
             <input
               type="text"
               placeholder="Search a hero"
@@ -39,6 +39,7 @@ export const SearchPage = () => {
               autoComplete="off"
               value={searchText}
               onChange={onInputChange}
+              aria-label="searchInput"
             />
             <button className="btn btn-outline-primary mt-1">Search</button>
           </form>
@@ -50,7 +51,7 @@ export const SearchPage = () => {
             <div className="alert alert-primary">Search a hero</div>
           ) : (
             heroes.length === 0 && (
-              <div className="alert alert-danger">
+              <div className="alert alert-danger" aria-label="errorMsg">
                 Hero called <b>{q}</b> doesn't exist
               </div>
             )

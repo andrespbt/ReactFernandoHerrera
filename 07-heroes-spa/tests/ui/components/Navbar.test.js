@@ -1,8 +1,14 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import { useContext } from "react";
-import { MemoryRouter } from "react-router-dom";
+import { MemoryRouter, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../src/auth";
 import { Navbar } from "../../../src/ui";
+
+const mockedNavigate = jest.fn();
+
+jest.mock("react-router-dom", () => ({
+  ...jest.requireActual("react-router-dom"),
+  useNavigate: () => mockedNavigate,
+}));
 
 describe("Tests on <Navbar />", () => {
   const contextValue = {
@@ -40,5 +46,6 @@ describe("Tests on <Navbar />", () => {
     const logoutButton = screen.getByRole("button");
     fireEvent.click(logoutButton);
     expect(contextValue.logout).toHaveBeenCalled();
+    expect(mockedNavigate).toHaveBeenCalledWith("/login", { replace: true });
   });
 });
