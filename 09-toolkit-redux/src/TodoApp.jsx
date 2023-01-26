@@ -14,8 +14,6 @@ export const TodoApp = () => {
     if (todoId > 0) setTodoId(todoId - 1);
   };
 
-  console.log(todo);
-
   return (
     <>
       <h1>Todo RTK Query</h1>
