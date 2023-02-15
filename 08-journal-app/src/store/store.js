@@ -5,7 +5,7 @@ import { journalSlice } from './journal';
 export const store = configureStore({
   reducer: {
     auth: authSlice.reducer,
-    journal: journalSlice.reducer
-    
+    journal: journalSlice.reducer,
   },
+  devTools: false,
 });
