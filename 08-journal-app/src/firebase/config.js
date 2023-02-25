@@ -8,26 +8,26 @@ import { getEnvironments } from '../helpers/getEnvironments';
 
 //Testing
 
-const env = getEnvironments();
-console.log(env);
+const { VITE_APIKEY, VITE_AUTHDOMAIN, VITE_PROJECTID, VITE_STORAGEBUCKET, VITE_MESSAGINGSENDERID, VITE_APPID } =
+  getEnvironments();
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyARxpTGwvyBeuLn3MVPDRcFhEz8uOKf7f0',
-  authDomain: 'journal-app-testing-940d2.firebaseapp.com',
-  projectId: 'journal-app-testing-940d2',
-  storageBucket: 'journal-app-testing-940d2.appspot.com',
-  messagingSenderId: '499354492113',
-  appId: '1:499354492113:web:8a8b07055cb51b912af9f0',
+  apiKey: VITE_APIKEY,
+  authDomain: VITE_AUTHDOMAIN,
+  projectId: VITE_PROJECTID,
+  storageBucket: VITE_STORAGEBUCKET,
+  messagingSenderId: VITE_MESSAGINGSENDERID,
+  appId: VITE_APPID,
 };
 
 // Production
 // const firebaseConfig = {
-//   apiKey: 'AIzaSyA2JZYL5HDR3fA7AeiL_oumKLTFNFLHQvI',
-//   authDomain: 'react-cursofernandoherrera.firebaseapp.com',
-//   projectId: 'react-cursofernandoherrera',
-//   storageBucket: 'react-cursofernandoherrera.appspot.com',
-//   messagingSenderId: '399329763109',
-//   appId: '1:399329763109:web:7a3cb118dfcee7a4c944cc',
+// apiKey: 'AIzaSyA2JZYL5HDR3fA7AeiL_oumKLTFNFLHQvI',
+// authDomain: 'react-cursofernandoherrera.firebaseapp.com',
+// projectId: 'react-cursofernandoherrera',
+// storageBucket: 'react-cursofernandoherrera.appspot.com',
+// messagingSenderId: '399329763109',
+// appId: '1:399329763109:web:7a3cb118dfcee7a4c944cc',
 // };
 
 // Initialize Firebase

@@ -1,6 +1,6 @@
 import { collection, deleteDoc, getDocs } from 'firebase/firestore/lite';
-import { FirebaseDB } from '../../../../src/firebase/config';
-import { addNewEmptyNote, savingNewNote, setActiveNote, startNewNote } from '../../../../src/store/journal';
+import { FirebaseDB } from '../../../src/firebase/config';
+import { addNewEmptyNote, savingNewNote, setActiveNote, startNewNote } from '../../../src/store/journal';
 
 describe('tests on Journal thunks', () => {
   const dispatch = jest.fn();

@@ -1,5 +1,6 @@
-import { authSlice, checkingCredentials, login, logout } from '../../../../src/store/auth/authSlice';
-import { demoUser, initialState, authenticatedState } from '../../../fixtures/authFixtures';
+import { authSlice, checkingCredentials, login, logout } from '../../../src/store/auth/authSlice';
+import { demoUser, initialState, authenticatedState } from '../../fixtures/authFixtures';
+
 describe('test on authSlice', () => {
   test('should return initial state and have "auth" as name', () => {
     expect(authSlice.name).toBe('auth');

@@ -1,15 +1,15 @@
-import { loginWithEmailPassword, logoutFirebase, signInWithGoogle } from '../../../../src/firebase/providers';
-import { checkingCredentials, login, logout } from '../../../../src/store/auth/authSlice';
+import { loginWithEmailPassword, logoutFirebase, signInWithGoogle } from '../../../src/firebase/providers';
+import { checkingCredentials, login, logout } from '../../../src/store/auth/authSlice';
 import {
   checkingAuthentication,
   startGoogleSignIn,
   startLoginWithEmailPassword,
   startLogOut,
-} from '../../../../src/store/auth/thunks';
-import { clearNotesLogout } from '../../../../src/store/journal';
-import { demoUser } from '../../../fixtures/authFixtures';
+} from '../../../src/store/auth/thunks';
+import { clearNotesLogout } from '../../../src/store/journal';
+import { demoUser } from '../../fixtures/authFixtures';
 
-jest.mock('../../../../src/firebase/providers');
+jest.mock('../../../src/firebase/providers');
 
 describe('test on thunks', () => {
   beforeEach(() => jest.clearAllMocks());
