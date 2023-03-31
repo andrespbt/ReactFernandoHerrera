@@ -8,7 +8,7 @@ export const FabAddNew = () => {
   const handleClickNew = () => {
     setActiveEvent({
       title: '',
-      notes: '',
+      note: '',
       start: new Date(),
       end: addHours(new Date(), 2),
       bgColor: '#fafafa',
@@ -23,7 +23,8 @@ export const FabAddNew = () => {
   return (
     <button
       className="btn btn-primary fab"
-      onClick={handleClickNew}>
+      onClick={handleClickNew}
+    >
       <i className="fas fa-plus"></i>
     </button>
   );

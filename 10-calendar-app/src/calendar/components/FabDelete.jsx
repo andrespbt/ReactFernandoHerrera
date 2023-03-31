@@ -1,9 +1,10 @@
 import { useCalendarStore } from '../../hooks';
 
 export const FabDelete = () => {
-  const { startDeletingEvent, hasEventSelected } = useCalendarStore();
+  const { startDeletingEvent, hasEventSelected, activeEvent } = useCalendarStore();
+
   const handleDelete = () => {
-    startDeletingEvent();
+    startDeletingEvent(activeEvent);
   };
 
   return (
@@ -12,7 +13,8 @@ export const FabDelete = () => {
       onClick={handleDelete}
       style={{
         display: hasEventSelected ? '' : 'none',
-      }}>
+      }}
+    >
       <i className="fas fa-trash-alt"></i>
     </button>
   );

@@ -29,7 +29,7 @@ export const CalendarModal = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formValues, setFormValues] = useState({
     title: '',
-    notes: '',
+    note: '',
     start: new Date(),
     end: addHours(new Date(), 2),
   });
@@ -89,14 +89,16 @@ export const CalendarModal = () => {
       style={customStyles}
       className="modal"
       overlayClassName="modal-fondo"
-      closeTimeoutMS={200}>
-      <h1> Nuevo evento </h1>
+      closeTimeoutMS={200}
+    >
+      <h1> New event </h1>
       <hr />
       <form
         className="container"
-        onSubmit={onSubmit}>
+        onSubmit={onSubmit}
+      >
         <div className="form-group mb-2">
-          <label>Fecha y hora inicio</label>
+          <label>Start date and time</label>
           <DatePicker
             selected={formValues.start}
             onChange={e => onDateChange(e, 'start')}
@@ -104,14 +106,10 @@ export const CalendarModal = () => {
             dateFormat="Pp"
             showTimeSelect="true"
           />
-          <input
-            className="form-control"
-            placeholder="Fecha inicio"
-          />
         </div>
 
         <div className="form-group mb-2">
-          <label>Fecha y hora fin</label>
+          <label>End date and time</label>
           <DatePicker
             minDate={formValues.start}
             selected={formValues.end}
@@ -124,11 +122,11 @@ export const CalendarModal = () => {
 
         <hr />
         <div className="form-group mb-2">
-          <label>Titulo y notas</label>
+          <label>Title and note</label>
           <input
             type="text"
             className={`form-control ${titleClass}`}
-            placeholder="Título del evento"
+            placeholder="Event title"
             name="title"
             autoComplete="off"
             value={formValues.title}
@@ -136,8 +134,9 @@ export const CalendarModal = () => {
           />
           <small
             id="emailHelp"
-            className="form-text text-muted">
-            Una descripción corta
+            className="form-text text-muted"
+          >
+            A short description
           </small>
         </div>
 
@@ -145,23 +144,26 @@ export const CalendarModal = () => {
           <textarea
             type="text"
             className="form-control"
-            placeholder="Notas"
+            placeholder="Note"
             rows="5"
-            name="notes"
-            value={formValues.notes}
-            onChange={onInputChange}></textarea>
+            name="note"
+            value={formValues.note}
+            onChange={onInputChange}
+          ></textarea>
           <small
             id="emailHelp"
-            className="form-text text-muted">
-            Información adicional
+            className="form-text text-muted"
+          >
+            Additional information
           </small>
         </div>
 
         <button
           type="submit"
-          className="btn btn-outline-primary btn-block">
+          className="btn btn-outline-primary btn-block"
+        >
           <i className="far fa-save"></i>
-          <span> Guardar</span>
+          <span> Save</span>
         </button>
       </form>
     </Modal>
