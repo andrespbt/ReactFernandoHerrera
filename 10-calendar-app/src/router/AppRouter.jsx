@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
-
 import { LoginPage } from '../auth';
 import { Spinner } from '../auth/components/Spinner';
 import { CalendarPage } from '../calendar';

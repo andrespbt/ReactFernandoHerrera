@@ -143,7 +143,7 @@ export const LoginPage = () => {
               <input
                 type="submit"
                 className="btnSubmit"
-                value="Crear cuenta"
+                value="Create account"
               />
             </div>
           </form>

@@ -2,7 +2,10 @@ import './Spinner.css';
 
 export const Spinner = () => {
   return (
-    <div className="spinner-container">
+    <div
+      aria-label="spinner"
+      className="spinner-container"
+    >
       <div className="sk-cube-grid">
         <div className="sk-cube sk-cube1"></div>
         <div className="sk-cube sk-cube2"></div>
